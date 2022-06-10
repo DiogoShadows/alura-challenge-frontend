@@ -18,5 +18,6 @@ export default defineComponent({
   html, 
   body{
     background-color: #051D3B;
+    color: white;
   }
 </style>
