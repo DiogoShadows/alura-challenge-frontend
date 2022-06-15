@@ -1,16 +1,16 @@
 <template class="cabecalho">
-  <div class="columns is-desktop">
-    <div class="column p-5">
+  <div class="columns is-desktop div-centralizado">
+    <div class="column p-5 is-one-quarter">
       <img alt="Logo alura" src="@/assets/logo.png" id="logo" />
     </div>
-    <div class="column is-half">
+    <div class="column div-centralizado">
       <input
         class="input input-texto"
         type="text"
         placeholder="Busque por algo"
       />
     </div>
-    <div class="column teste container">
+    <div class="column is-one-quarter div-centralizado container">
       <img src="@/assets/logo.png" alt="Imagem Usuário" id="imagem-usuario" />
       <b>Nome do Usuário</b>
     </div>
@@ -33,8 +33,9 @@ export default defineComponent({
   display: flex;
 }
 
-.teste{
+.div-centralizado{
   align-items: center;
+  justify-content: center;
   display: flex;
 }
 
@@ -45,7 +46,6 @@ export default defineComponent({
   background-color: rgba(236, 146, 146, 0.16);
   border: 0ch;
   color: white;
-  margin-top: 25px;
 }
 
 ::placeholder {
