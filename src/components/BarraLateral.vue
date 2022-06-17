@@ -1,5 +1,4 @@
 <template>
-  <div class="columns">
     <div class="column is-one-quarter barra ml-5">
       <h6 class="title is-6">Menu</h6>
       <span class="mb-3" v-for="item in itensMenu" :key="item.id">
@@ -9,7 +8,6 @@
         <span>{{ item.texto }}</span>
       </span>
     </div>
-  </div>
 </template>
 
 <script>
@@ -45,10 +43,5 @@ export default defineComponent({
 .icon{
     background-color: rgb(110, 110, 255);
     border-radius: 30%;
-}
-
-.title{
-    color: white;
-    letter-spacing: 3px;
 }
 </style>

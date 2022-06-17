@@ -11,8 +11,8 @@
       />
     </div>
     <div class="column is-one-quarter div-centralizado container">
-      <img src="@/assets/logo.png" alt="Imagem Usuário" id="imagem-usuario" />
-      <b>Nome do Usuário</b>
+      <img src="@/assets/gato.jpeg" alt="Imagem Usuário" id="imagem-usuario" />
+      <b class="ml-3">Nome do Usuário</b>
     </div>
   </div>
 </template>
@@ -46,6 +46,7 @@ export default defineComponent({
   background-color: rgba(236, 146, 146, 0.16);
   border: 0ch;
   color: white;
+  height: 50px;
 }
 
 ::placeholder {
@@ -54,9 +55,7 @@ export default defineComponent({
 }
 
 #imagem-usuario {
-  border-style: solid;
-  border-color: aliceblue;
   border-radius: 50%;
-  width: 80px;
+  width: 40px;
 }
 </style>
