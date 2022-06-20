@@ -19,15 +19,25 @@
     <div class="mt-6">
       <h1 class="title is-6">Personalização</h1>
       <div class="mr-5">
-        <input
-          class="input input-texto"
-          type="text"
-          placeholder="Nome do projeto"
-        />
-        <div class="select mt-4" style="width: 100%">
-            <select class="input-texto" style="width: 100%">
-                <option v-for="linguagem, i in linguagens" :key="i">{{ linguagem.nome }}</option>
-            </select>
+        <div class="select" style="width: 100%">
+          <select class="input-texto" style="width: 100%">
+            <option v-for="(linguagem, i) in linguagens" :key="i">{{
+              linguagem.nome
+            }}</option>
+          </select>
+        </div>
+        <div class="mt-5">
+          <input
+            type="color"
+            id="colorpicker"
+            value="#0000ff"
+            style="width:100%; height: 50px;"
+          />
+        </div>
+        <div class="mt-3">
+          <button class="button is-link" style="width: 100%; height: 50px;">
+            Salvar Projeto
+          </button>
         </div>
       </div>
     </div>
@@ -40,17 +50,17 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "MenuEdicaoProjeto",
   data() {
-    return{
-        linguagens: [
-            {
-                nome: "Java",
-            },
-            {
-                nome: "JavaScript",
-            }
-        ]
-    }
-  }
+    return {
+      linguagens: [
+        {
+          nome: "Java",
+        },
+        {
+          nome: "JavaScript",
+        },
+      ],
+    };
+  },
 });
 </script>
 

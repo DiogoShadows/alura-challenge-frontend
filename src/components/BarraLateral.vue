@@ -1,13 +1,13 @@
 <template>
-    <div class="column is-one-quarter barra ml-5">
-      <h6 class="title is-6">Menu</h6>
-      <span class="mb-3" v-for="item in itensMenu" :key="item.id">
-        <span class="icon is-large mr-3">
-          <ion-icon :name="item.icone"></ion-icon>
-        </span>
-        <span>{{ item.texto }}</span>
+  <div class="column is-one-quarter barra ml-5">
+    <h6 class="title is-6">Menu</h6>
+    <span class="mb-3" v-for="item in itensMenu" :key="item.id">
+      <span class="icon is-large mr-3">
+        <ion-icon :name="item.icone"></ion-icon>
       </span>
-    </div>
+      <span>{{ item.texto }}</span>
+    </span>
+  </div>
 </template>
 
 <script>
@@ -40,8 +40,8 @@ export default defineComponent({
   flex-direction: column;
 }
 
-.icon{
-    background-color: rgb(110, 110, 255);
-    border-radius: 30%;
+.icon {
+  background-color: rgb(110, 110, 255);
+  border-radius: 30%;
 }
 </style>
