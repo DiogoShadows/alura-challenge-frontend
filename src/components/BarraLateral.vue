@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-one-quarter barra ml-5">
+  <div class="column is-one-quarter barra pl-6">
     <h6 class="title is-6">Menu</h6>
     <span class="mb-3" v-for="item in itensMenu" :key="item.id">
       <span class="icon is-large mr-3">

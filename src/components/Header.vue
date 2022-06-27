@@ -1,9 +1,9 @@
 <template class="cabecalho">
-  <div class="columns is-desktop div-centralizado">
+  <div class="columns div-centralizado">
     <div class="column p-5 is-one-quarter">
       <img alt="Logo alura" src="@/assets/logo.png" id="logo" />
     </div>
-    <div class="column div-centralizado">
+    <div class="column">
       <input
         class="input input-texto"
         type="text"
