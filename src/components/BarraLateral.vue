@@ -2,10 +2,20 @@
   <div class="column is-one-quarter barra pl-6">
     <h6 class="title is-6">Menu</h6>
     <span class="mb-3" v-for="item in itensMenu" :key="item.id">
-      <span class="icon is-large mr-3">
-        <ion-icon :name="item.icone"></ion-icon>
-      </span>
-      <span>{{ item.texto }}</span>
+      <router-link
+        :to="item.link"
+        @mouseover="item.itemMenuHover = true"
+        @mouseleave="item.itemMenuHover = false"
+      >
+        <div
+          :style="[item.itemMenuHover ? { opacity: '85%' } : { opacity: '35%' }]"
+        >
+          <span class="icon is-large mr-3">
+            <ion-icon :name="item.icone" style="color: white;"></ion-icon>
+          </span>
+          <span style="color: white;">{{ item.texto }}</span>
+        </div>
+      </router-link>
     </span>
   </div>
 </template>
@@ -22,11 +32,15 @@ export default defineComponent({
           id: 1,
           texto: "Editor de código",
           icone: "code-slash-outline",
+          link: "/",
+          itemMenuHover: false,
         },
         {
           id: 2,
           texto: "Sobre",
           icone: "people-outline",
+          link: "/comunidade",
+          itemMenuHover: false,
         },
       ],
     };
@@ -41,7 +55,7 @@ export default defineComponent({
 }
 
 .icon {
-  background-color: rgb(110, 110, 255);
+  background-color: #5081FB;
   border-radius: 30%;
 }
 </style>
